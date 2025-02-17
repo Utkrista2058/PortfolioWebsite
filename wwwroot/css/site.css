@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #f0f0f0;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+}
+/* Projects Page */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background-color: #2a2a2a; /* Darker background for better contrast */
+    color: #fff; /* Light text color */
+}
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff; /* White text for the title */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Slight shadow for better legibility */
+}
+/* Make sure the body takes the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Flexbox for the body layout to push the footer to the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content area will take up available space */
+main {
+    flex: 1;
+}
+
+/* Footer should always be at the bottom */
+.footer {
+    background-color: #2a2a2a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+    .footer a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .footer a:hover {
+            color: #0056b3;
+        }
+
+.card-text {
+    font-size: 1rem;
+    color: #e0e0e0; /* Light gray color for the text */
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
+    padding: 15px; /* Adding padding for better spacing around the text */
+}
+
+/* Adding hover effect for card text */
+.card:hover .card-title,
+.card:hover .card-text {
+    color: #ff0044; /* Change text color on hover for interactivity */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* More prominent shadow on hover */
+}
+
+/* Header and Navigation */
+.navbar {
+    background: linear-gradient(135deg, #ff0044, #00bfff);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: navbarAnimation 2s infinite alternate;
+}
+
+@keyframes navbarAnimation {
+    0% {
+        background: linear-gradient(135deg, #ff0044, #00bfff);
+    }
+
+    100% {
+        background: linear-gradient(135deg, #00bfff, #ff0044);
+    }
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: textAnimation 3s ease-in-out infinite alternate;
+}
+
+@keyframes textAnimation {
+    0% {
+        text-shadow: 0 0 5px #ff0044, 0 0 10px #ff0044;
+    }
+
+    100% {
+        text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff;
+    }
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    color: #ffffff !important;
+    margin: 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #00bfff;
+        bottom: 0;
+        left: -100%;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        left: 0;
+    }
+
+    .nav-link:hover {
+        color: #ff0044 !important;
+        transform: scale(1.1);
+    }
+
+.navbar-toggler {
+    border-color: #ff0044;
+}
+
+/* Hover animation on navbar toggle */
+.navbar-toggler-icon {
+    background-color: #ff0044;
+    animation: toggleAnimation 1s infinite alternate;
+}
+
+@keyframes toggleAnimation {
+    0% {
+        background-color: #00bfff;
+    }
+
+    100% {
+        background-color: #ff0044;
+    }
+}
